@@ -1,0 +1,25 @@
+{show ? (
+        <Background>
+          <ForwardWrapper show={show}>
+            <WrapperImage>
+              <img src={pix} alt="img" />
+            </WrapperImage>
+            <WrapperContent>
+              <h3>This is Me</h3>
+              <p>I am Humble</p>
+            </WrapperContent>
+            <CloseModalButton
+              aria-label="close modal"
+              onClick={() => setShow((prev) => !prev)}
+            />
+          </ForwardWrapper>
+        </Background>
+      ) : null}
+
+
+
+      const[accept, setAccept] = useState({})
+
+      const HandleChange = (e) => {
+        setAccept({...accept, [e.target.name]:e.target.value})
+      }
